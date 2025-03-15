@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRLingua - Language Learning Community</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #f0f8ff;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #4c8c8c;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #347780;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: -10px;
+    }
+    
+    .sign-up-btn {
+      background-color: white;
+      color: #4c8c8c;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    /* Testimonials Grid */
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stars {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+    
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+    
+    .read-more {
+      color: #999;
+      font-size: 12px;
+      text-decoration: none;
+      display: block;
+      margin-top: 5px;
+    }
+    
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    
+    .user-details {
+      font-size: 14px;
+    }
+    
+    .user-name {
+      font-weight: bold;
+    }
+    
+    .user-meetings {
+      color: #666;
+      margin-top: 3px;
+    }
+    
+    .user-country {
+      color: #666;
+    }
+    
+    /* Footer Styles */
+    footer {
+      height: 33vh;
+      background: linear-gradient(135deg, #347780 0%, #1d4146 100%);
+      padding: 30px 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+  }
+
+  .footer-logo {
+      grid-column: 1;
+      display: flex;
+      align-items: flex-start;
+      color: white;
+  }
+
+  .footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 2 / 4;
+      gap: 20px;
+  }
+
+  .link-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .contact-info {
+      grid-column: 4;
+      text-align: right;
+  }
+
+  footer a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+  }
+  .contact-info{
+    color: white;
+  }
+
+  .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      margin-top: 20px;
+  }
+
+  .social-icon {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      color: #387e87;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+  }
+
+  .copyright {
+      height: 7vh;
+      background-color: #387e87;
+      padding: 15px 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .copyright p {
+      font-size: 14px;
+  }
+
+  .footer-brand {
+      display: flex;
+      align-items: center;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+        <div class="logo-icon">VR</div>
+        VRLingua
+    </div>
+    <nav>
+      <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./Languages.html">Languages</a></li>
+          <li><a href="./Community.html">Community</a></li>
+          <li><a href="./Tools.html">Tools</a></li>
+          <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+      </ul>
+     
+
+  </nav>
+</header>
+
+  <!-- Testimonials Grid -->
+  <div class="testimonials-container">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "I have been here for almost 3 years and I am glad to have joined this club. I actively practice all over the world to join — this club is the best."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Serhan</div>
+          <div class="user-meetings">88 meetings</div>
+          <div class="user-country">Turkey</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Speaking Club is an excellent platform to practice speaking skills and enhance confidence. One of my favorite advantages..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Helen</div>
+          <div class="user-meetings">162 meetings</div>
+          <div class="user-country">Russia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Speaking Club is one of the best ways to boost your speaking skills and really helps to find your confidence. If you didn't have enough speaking practice before."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Pavlo</div>
+          <div class="user-meetings">634 meetings</div>
+          <div class="user-country">Ukraine</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Speaking Club is an amazing platform that has enabled me to meet and interact with people from around the world while being in the..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Marie</div>
+          <div class="user-meetings">94 meetings</div>
+          <div class="user-country">France</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 5 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "The Speaking Club is the ultimate place to improve your English skills for a better understanding of the world around. I love it ❤"
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">George</div>
+          <div class="user-meetings">269 meetings</div>
+          <div class="user-country">Germany</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 6 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "I find this platform well-organized, safe and helpful through interacting with people from all kinds of backgrounds and..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Yumiko</div>
+          <div class="user-meetings">1146 meetings</div>
+          <div class="user-country">Japan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 7 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Improving my English while having fun and meeting lots of amazing people from all over the world. Using VRLingua Speaking Club this is possible!"
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Giovanna</div>
+          <div class="user-meetings">1829 meetings</div>
+          <div class="user-country">Italy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 8 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "The Speaking Club is very effective about improving English speaking and grammar skills while providing the opportunity to find..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Mete</div>
+          <div class="user-meetings">1439 meetings</div>
+          <div class="user-country">Turkey</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 9 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Being here has helped me gain more confidence in my speaking skills 🙌 All of this has positively affected my..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Quimbamba</div>
+          <div class="user-meetings">356 meetings</div>
+          <div class="user-country">Angola</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 10 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">
+        "Speaking club paves a way to put your English learning into practice. As you interact with people from varied cultures, it helps in..."
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-details">
+          <div class="user-name">Sushmitha</div>
+          <div class="user-meetings">72 meetings</div>
+          <div class="user-country">India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+    </div>
+    
+    <div class="footer-links">
+        <div class="link-column">
+            <a href="./index.html">Home</a>
+            <a href="./Languages.html">Languages</a>
+            <a href="./Tools.html">Tools</a>
+            <a href="./About-us.html">Explore</a>
+            <a href="./Pricing Plans.html">Events</a>
+        </div>
+        
+        <div class="link-column">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="./About-us.html">About Us</a>
+            <a href="./Community.html">Community</a>
+            <a href="./About-us.html">Contact Us</a>
+        </div>
+    </div>
+    
+    <div class="contact-info">
+        <p>Email: contact@vrlingua.com</p>
+        <p>Phone: +91 99669966996</p>
+        
+      
+    </div>
+</footer>
+</body>
+</html>

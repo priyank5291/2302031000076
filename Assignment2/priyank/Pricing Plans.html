@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRLingua - Pricing Plans</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: white;
+        }
+
+        /* Header styles */
+        header {
+            height: 10vh;
+            background-color: #5a9aa9;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a9aa9;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: -7px;
+
+        }
+
+        .sign-up-btn {
+            background-color: white;
+            color: #5a9aa9;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        /* Pricing section styles */
+        .pricing-container {
+            height: 60vh;
+            max-width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            width: 320px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .card-blue .card-header {
+           
+            background-color: #2980b9;
+        }
+
+        .card-navy .card-header {
+            background-color: #1a3e5a;
+        }
+
+        .card-pink .card-header {
+            background-color: #c2185b;
+        }
+
+        .card-content {
+            background-color: white;
+            padding: 30px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .price-amount {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .price-currency {
+            font-size: 24px;
+            vertical-align: super;
+        }
+
+        .price-cents {
+            font-size: 24px;
+        }
+
+        .price-period {
+            color: #888;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .savings {
+            text-align: center;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .feature-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .check-icon {
+            color: #4CAF50;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .feature-text {
+            line-height: 1.4;
+        }
+
+        .new-tag {
+            color: #f44336;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .cta-button {
+            margin-top: 0vh;
+            text-align: center;
+            padding: 15px;
+           
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            width: 100%;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-blue {
+            background-color: #2980b9;
+        }
+
+        .btn-navy {
+            background-color: #1a3e5a;
+        }
+
+        .btn-pink {
+            background-color: #c2185b;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer styles */
+        footer {
+            height: 33vh;
+            background-color: #5a9aa9;
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            color: white;
+        }
+
+        .footer-logo {
+            grid-column: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 4;
+            gap: 20px;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            grid-column: 4;
+            text-align: right;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #5a9aa9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            height: 7vh;
+            background-color: #5a9aa9;
+            padding: 15px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header navigation -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Languages.html">Languages</a></li>
+                <li><a href="./Community.html">Community</a></li>
+                <li><a href="./Tools.html">Tools</a></li>
+                <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+            </ul>
+           
+
+        </nav>
+    </header>
+
+    <!-- Pricing section -->
+    <div class="pricing-container">
+        <!-- 1 Month plan -->
+        <div class="pricing-card card-blue">
+            <div class="card-header">1 Month</div>
+            <div class="card-content">
+                <div class="price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">4</span>
+                    <span class="price-cents">.99</span>
+                </div>
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Unlimited meetings</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Find a partner</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">No ads</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">AI Feedback</span>
+                        <span class="new-tag">NEW</span>
+                    </li>
+                </ul>
+                <div class="cta-button">
+                    <a href="./sign-up.html" class="btn btn-blue">Get started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Months plan -->
+        <div class="pricing-card card-navy">
+            <div class="card-header">3 Months</div>
+            <div class="card-content">
+                <div class="price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">38</span>
+                    <span class="price-cents">.99</span>
+
+                </div>
+               
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Unlimited meetings</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Find a partner</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">No ads</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">AI Feedback</span>
+                        <span class="new-tag">NEW</span>
+                    </li>
+                </ul>
+                <div class="cta-button">
+                    <a href="./sign-up.html" class="btn btn-navy">Get started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 Months plan -->
+        <div class="pricing-card card-pink">
+            <div class="card-header">6 Months</div>
+            <div class="card-content">
+                <div class="price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">64</span>
+                    <span class="price-cents">.99</span>
+                </div>
+         
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Unlimited meetings</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">Find a partner</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">No ads</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span class="feature-text">AI Feedback</span>
+                        <span class="new-tag">NEW</span>
+                    </li>
+                </ul>
+                <div class="cta-button">
+                    <a href="./sign-up.html" class="btn btn-pink">Get started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="logo-icon">VR</div>
+                VRLingua
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="link-column">
+                <a href="./index.html">Home</a>
+                <a href="./Languages.html">Languages</a>
+                <a href="./Tools.html">Tools</a>
+                <a href="./About-us.html">Explore</a>
+                <a href="./Pricing Plans.html">Events</a>
+            </div>
+            
+            <div class="link-column">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="./About-us.html">About Us</a>
+                <a href="./Community.html">Community</a>
+                <a href="./About-us.html">Contact Us</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email: contact@vrlingua.com</p>
+            <p>Phone: +91 99669966996</p>
+            
+         
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>©VRLingua|All Rights Reserved</p>
+        <div class="footer-brand">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+    </div>
+</body>
+</html>

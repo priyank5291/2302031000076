@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRLingua - Learn languages by speaking with AI</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+        }
+        
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #4a9a9e;
+            color: white;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a9aa9;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .sign-up-btn {
+            background-color: white;
+            color: #4a9a9e;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Hero section */
+        .hero {
+            display: flex;
+            height: 400px;
+        }
+        
+        .hero-left {
+            width: 25%;
+            background: linear-gradient(90deg, #5c52d5 , #fff );
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .hero-avatar {
+            width: 80%;
+            max-width: 320px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .hero-avatar img {
+            width: 100%;
+            display: block;
+        }
+        
+        .hero-right {
+            width: 60%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero-right h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        
+        .hero-right .purple {
+            color: #7c67ff;
+        }
+        
+        .hero-right p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #4a9a9e;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+        
+        .no-signup {
+            color: #888;
+            display: flex;
+            align-items: center;
+        }
+        
+        .no-signup img {
+            margin-left: 5px;
+            height: 15px;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #5a9aa9;
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            grid-column: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 4;
+            gap: 20px;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            grid-column: 4;
+            text-align: right;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #5a9aa9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            background-color: #5a9aa9;
+            padding: 15px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info {
+            color: white;
+            grid-column: 4;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Languages.html">Languages</a></li>
+                <li><a href="./Community.html">Community</a></li>
+                <li><a href="./Tools.html">Tools</a></li>
+                <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+            </ul>
+           
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-avatar">
+                <img src="./AI.png" alt="">       
+             </div>
+        </div>
+        <div class="hero-right">
+            <h1>Learn languages<br><span class="purple">by speaking</span> with AI.</h1>
+            <p>
+                Talk to a <span class="purple">teacher</span>. Roleplay <span class="purple">real-life situations</span>. Improve your <span class="purple">speaking & listening</span>.
+            </p>
+            <a href="#" class="cta-button">START NOW FOR FREE</a>
+            <div class="no-signup">
+                No signup required <span>ⓘ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="logo-icon">VR</div>
+                VRLingua
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="link-column">
+                <a href="./index.html">Home</a>
+                <a href="./Languages.html">Languages</a>
+                <a href="./Tools.html">Tools</a>
+                <a href="./About-us.html">Explore</a>
+                <a href="./Pricing Plans.html">Events</a>
+            </div>
+            
+            <div class="link-column">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="./About-us.html">About Us</a>
+                <a href="./Community.html">Community</a>
+                <a href="./About-us.html">Contact Us</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email: contact@vrlingua.com</p>
+            <p>Phone: +91 99669966996</p>
+     
+        </div>
+    </footer>
+</body>
+</html>

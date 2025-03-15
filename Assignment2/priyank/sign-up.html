@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRLingua - Sign Up</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: white;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #5a9aa9;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a9aa9;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: -7px;
+
+        }
+
+        .sign-up-btn {
+            background-color: white;
+            color: #5a9aa9;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        /* Sign up content styles */
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: white;
+            min-height: 400px;
+        }
+
+        .signup-title {
+            font-size: 60px;
+            font-weight: bold;
+            color: #5a9aa9;
+            text-align: left;
+            width: 40%;
+            padding-right: 50px;
+        }
+
+        .signup-form {
+            background-color: #a6c2c8;
+            border-radius: 30px;
+            padding: 50px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            width: 40%;
+        }
+
+        .form-group input {
+            width: 60%;
+            padding: 12px;
+            border-radius: 20px;
+            border: 2px solid #333;
+            background-color: #a6c2c8;
+            font-size: 16px;
+        }
+
+        .form-submit {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            background-color: white;
+            color: #5a9aa9;
+            padding: 10px 30px;
+            border-radius: 25px;
+            border: 2px solid #333;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #5a9aa9;
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            grid-column: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 4;
+            gap: 20px;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            grid-column: 4;
+            text-align: right;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #5a9aa9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            background-color: #5a9aa9;
+            padding: 15px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header navigation -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Languages.html">Languages</a></li>
+                <li><a href="./Community.html">Community</a></li>
+                <li><a href="./Tools.html">Tools</a></li>
+                <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+            </ul>
+           
+
+        </nav>
+    </header>
+
+    <!-- Sign-up form -->
+    <div class="signup-container">
+        <div class="signup-title">
+            SIGN-UP
+        </div>
+        <div class="signup-form">
+            <div class="form-group">
+                <label for="email">E-Mail :</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-submit">
+                <button class="submit-btn">SIGN-UP</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="logo-icon">VR</div>
+                VRLingua
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="link-column">
+                <a href="./index.html">Home</a>
+                <a href="./Languages.html">Languages</a>
+                <a href="./Tools.html">Tools</a>
+                <a href="./About-us.html">Explore</a>
+                <a href="./Pricing Plans.html">Events</a>
+            </div>
+            
+            <div class="link-column">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="./About-us.html">About Us</a>
+                <a href="./Community.html">Community</a>
+                <a href="./About-us.html">Contact Us</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email: contact@vrlingua.com</p>
+            <p>Phone: +91 99669966996</p>
+            
+          
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>©VRLingua|All Rights Reserved</p>
+        <div class="footer-brand">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+    </div>
+</body>
+</html>

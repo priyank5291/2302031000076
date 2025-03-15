@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRLingua - Connect with Native Speakers</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        header {
+            height: 10vh;
+            background-color: rgba(52, 119, 128, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #347780;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: -7px;
+        }
+
+        .sign-up-btn {
+            background-color: white;
+            color: #347780;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-title {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        /* Language Cards Grid */
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .language-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Language Card Backgrounds */
+        .english {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('uk-flag.jpg');
+            background-size: cover;
+        }
+
+        .korean {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('korea-flag.jpg');
+            background-size: cover;
+        }
+
+        .chinese {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('china-flag.jpg');
+            background-size: cover;
+        }
+
+        .japanese {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('japan-flag.jpg');
+            background-size: cover;
+        }
+
+        .spanish {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('spain-flag.jpg');
+            background-size: cover;
+        }
+
+        .french {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('france-flag.jpg');
+            background-size: cover;
+        }
+
+        .german {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('germany-flag.jpg');
+            background-size: cover;
+        }
+
+        .italian {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('italy-flag.jpg');
+            background-size: cover;
+        }
+
+        .russian {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('russia-flag.jpg');
+            background-size: cover;
+        }
+
+        .portuguese {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('portugal-flag.jpg');
+            background-size: cover;
+        }
+
+        .turkish {
+            background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('turkey-flag.jpg');
+            background-size: cover;
+        }
+
+        /* Footer Styles */
+        footer {
+            height: 33vh;
+            background: linear-gradient(135deg, #347780 0%, #1d4146 100%);
+            padding: 30px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        footer>.logo{
+            color: white;
+        }
+        .footer-logo {
+            grid-column: 1;
+            display: flex;
+            align-items: flex-start;
+            color: white;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 4;
+            gap: 20px;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            color: white;
+            grid-column: 4;
+            text-align: right;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #387e87;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            height: 7vh;
+            background-color: #387e87;
+            padding: 15px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright p {
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Languages.html">Languages</a></li>
+                <li><a href="./Community.html">Community</a></li>
+                <li><a href="./Tools.html">Tools</a></li>
+                <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+            </ul>
+           
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="hero-title">Connect with native speakers to practice languages</h1>
+        
+        <div class="language-grid">
+            <div class="language-card english">
+                <p>English Language Exchange</p>
+            </div>
+            <div class="language-card korean">
+                <p>Korean Language Exchange</p>
+            </div>
+            <div class="language-card chinese">
+                <p>Chinese Language Exchange</p>
+            </div>
+            <div class="language-card japanese">
+                <p>Japanese Language Exchange</p>
+            </div>
+            <div class="language-card spanish">
+                <p>Spanish Language Exchange</p>
+            </div>
+            <div class="language-card french">
+                <p>French Language Exchange</p>
+            </div>
+            <div class="language-card german">
+                <p>German Language Exchange</p>
+            </div>
+            <div class="language-card italian">
+                <p>Italian Language Exchange</p>
+            </div>
+            <div class="language-card russian">
+                <p>Russian Language Exchange</p>
+            </div>
+            <div class="language-card portuguese">
+                <p>Portuguese Language Exchange</p>
+            </div>
+            <div class="language-card turkish">
+                <p>Turkish Language Exchange</p>
+            </div>
+            <div class="language-card">
+                <p>Find partners to practice with >></p>
+            </div>
+        </div>
+    </main>
+
+     
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="logo-icon">VR</div>
+                VRLingua
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="link-column">
+                <a href="./index.html">Home</a>
+                <a href="./Languages.html">Languages</a>
+                <a href="./Tools.html">Tools</a>
+                <a href="./About-us.html">Explore</a>
+                <a href="./Pricing Plans.html">Events</a>
+            </div>
+            
+            <div class="link-column">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="./About-us.html">About Us</a>
+                <a href="./Community.html">Community</a>
+                <a href="./About-us.html">Contact Us</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email: contact@vrlingua.com</p>
+            <p>Phone: +91 99669966996</p>
+            
+          
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>©VRLingua|All Rights Reserved</p>
+        <div class="footer-brand">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

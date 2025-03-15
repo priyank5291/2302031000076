@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRLingua - Virtual Reality Language Exchange</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            
+            color: white;
+            height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            height: 10vh;
+            background-color: rgba(52, 119, 128, 0.95);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #347780;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: -7px;
+        }
+
+        .sign-up-btn {
+            background-color: white;
+            color: #347780;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        /* Hero section styles */
+        .hero {
+            height: 50vh;
+            background: linear-gradient(135deg, #347780 0%, #1d4146 100%);
+            padding: 50px 50px 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .hero-text {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 22px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #347780;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 50px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        <!-- /* 3D Platform effect */
+        <!-- .platform {
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background: #265c63;
+            border-radius: 50%;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        } --> -->
+
+        /* Footer styles */
+        footer {
+            height: 33vh;
+            background: linear-gradient(135deg, #347780 0%, #1d4146 100%);
+            padding: 30px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            grid-column: 1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column: 2 / 4;
+            gap: 20px;
+        }
+
+        .link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            grid-column: 4;
+            text-align: right;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #387e87;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            height: 7vh;
+            background-color: #387e87;
+            padding: 15px 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header navigation -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Languages.html">Languages</a></li>
+                <li><a href="./Community.html">Community</a></li>
+                <li><a href="./Tools.html">Tools</a></li>
+                <a href="./sign-up.html" class="sign-up-btn">Sign up</a>
+            </ul>
+           
+
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <h1>Welcome to Virtual Reality Language Exchange!</h1>
+        <div class="hero-text">
+            <p>Immerse yourself in a virtual environment</p>
+            <p>where you can practice languages with native speakers</p>
+            <p>in real-time. Improve your fluency through interactive VR conversations,</p>
+            <p>cultural experiences, and engaging activities.</p>
+        </div>
+        <a href="./sign-up.html" class="cta-button">Sign up</a>
+        <!-- <div class="platform"></div> -->
+    </section>
+
+   
+    <footer>
+        <div class="footer-logo">
+            <div class="logo">
+                <div class="logo-icon">VR</div>
+                VRLingua
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="link-column">
+                <a href="./index.html">Home</a>
+                <a href="./Languages.html">Languages</a>
+                <a href="./Tools.html">Tools</a>
+                <a href="./About-us.html">Explore</a>
+                <a href="./Pricing Plans.html">Events</a>
+            </div>
+            
+            <div class="link-column">
+                <a href="#">Facebook</a>
+                <a href="./speaking.html">Speaking</a>
+                <a href="./About-us.html">About Us</a>
+                <a href="./Community.html">Community</a>
+                <a href="./About-us.html">Contact Us</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <p>Email: contact@vrlingua.com</p>
+            <p>Phone: +91 99669966996</p>
+            
+          
+        </div>
+    </footer>
+    
+    <div class="copyright">
+        <p>©VRLingua|All Rights Reserved</p>
+        <div class="footer-brand">
+            <div class="logo-icon">VR</div>
+            VRLingua
+        </div>
+    </div>
+</body>
+</html>
